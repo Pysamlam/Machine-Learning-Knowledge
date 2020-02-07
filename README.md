@@ -48,7 +48,7 @@
 传送门：https://arxiv.org/
 
 简单介绍：arXiv是个提交论文预印本（preprint）的平台，里面的论文都没有经过同行评审（peer review），所以文章质量参差不齐，但却会比较新颖，可以从里面看下别人研究的新玩意。
-![image](./assets/website1.png)
+![image](./asserts/website1.png)
 
 
 
@@ -56,7 +56,7 @@
 传送门：https://papers.nips.cc/
 
 简单介绍：NIPS（NeurIPS），全称神经信息处理系统大会(Conference and Workshop on Neural Information Processing Systems)，是一个关于机器学习和计算神经科学的国际会议，该网站收录相关paper。
-![image](./assets/website2.png)
+![image](./asserts/website2.png)
 
 
 
@@ -64,7 +64,7 @@
 传送门：https://paperswithcode.com/
 
 简单介绍： 压轴登场！这个是我强力推荐的一个网站，它不仅收录了很多机器学习的论文，而且还把相关论文的代码也一并收录，大多数也都配备了数据集，可以拿来直接操作一波，而且，它还可以按照热度给我们排序，这样子我们可以挑着一些重要热门的来看，十分友好！
-![image](./assets/website3.png)
+![image](./asserts/website3.png)
 
 
 
@@ -133,7 +133,7 @@ Download：https://arxiv.org/pdf/1607.01759v3.pdf
 
 前些天在同行交流群里，有个话题一直在群里热烈地讨论，那就是 **如何解释机器学习模型** ，因为在风控领域，一个模型如果不能得到很好的解释一般都不会被通过的，在银行里会特别的常见，所以大多数同行都是会用 LR 来建模。但是，机器学习的模型算法这么多，不用岂不是很浪费？而且有些算法还十分好用的，至少在效果上，如XGBoost、GBDT、Adaboost。
 
-![1565331425811](./assets/080901.png)
+![1565331425811](./asserts/080901.png)
 
 
 那么，有同学就会问了，为什么这些算法会没有解释性呢？其实是这样子的，刚刚所说的那些模型都是一些集成模型，都是由复杂的树结构去组成的模型，对于人类来说我们很难直观地去解释为什么这个客户就是烂，到底是什么特征导致他烂？
@@ -190,7 +190,7 @@ Download：https://arxiv.org/pdf/1607.01759v3.pdf
 
 > 有2个模型，Model A 和 Model B，其中A和B完全一致，但是我们在计算预测值的时候，强行给 Model B 的 特征 Cough 加上 10分。如下图所示（点击看大图）：
 
-![1565335547295](./assets/080902.png)
+![1565335547295](./asserts/080902.png)
 
 
 
@@ -208,7 +208,7 @@ Download：https://arxiv.org/pdf/1607.01759v3.pdf
 
 > SHAP（Shapley Additive exPlanation）是解释任何机器学习模型输出的统一方法。SHAP将博弈论与局部解释联系起来，根据期望表示唯一可能的一致和局部精确的加性特征归属方法。
 
-![1565342138360](./assets/080903.png)
+![1565342138360](./asserts/080903.png)
 
 
 
@@ -216,9 +216,9 @@ Download：https://arxiv.org/pdf/1607.01759v3.pdf
 
 > Definition 2.1. Additive feature attribution methods have an explanation model g that is a linear function of binary variables
 
-![1565343474766](./assets/080904.png)
+![1565343474766](./asserts/080904.png)
 
-其中，![1565343537129](./assets/080905.png)
+其中，![1565343537129](./asserts/080905.png)
 
 M是输入特征的个数， ϕi’ 就是特征的贡献度。ϕ0 是一个常数（指的是所有样本的预测均值）。SHAP 值有唯一的解，也具有3个特性：**Local Accuracy、Missingness、Consistency。**
 
@@ -283,7 +283,7 @@ shap.force_plot(explainer.expected_value, shap_values[0,:], X.iloc[0,:])
 
 #### output：
 
-![image-20190810104155096](./assets/080906.png)
+![image-20190810104155096](./asserts/080906.png)
 
 上面的图展示了每个特征的重要度，会预先计算好一个均值，将预测值变得更高的偏向于红色这边，反之蓝色。
 
@@ -298,7 +298,7 @@ shap.force_plot(explainer.expected_value, shap_values, X)
 
 #### output：
 
-![080907](./assets/080907.gif)
+![080907](./asserts/080907.gif)
 
 
 
@@ -317,7 +317,7 @@ shap.dependence_plot("RM", shap_values, X)
 
 #### output：
 
-![image-20190810111816780](./assets/080908.png)
+![image-20190810111816780](./asserts/080908.png)
 
 
 
@@ -330,7 +330,7 @@ shap.summary_plot(shap_values, X)
 
 #### output:
 
-![image-20190810115230491](./assets/080909.png)
+![image-20190810115230491](./asserts/080909.png)
 
 
 
@@ -344,7 +344,7 @@ shap.summary_plot(shap_values, X, plot_type="bar")
 
 #### output:
 
-![image-20190810115425399](./assets/080910.png)
+![image-20190810115425399](./asserts/080910.png)
 
 
 
@@ -399,13 +399,13 @@ https://github.com/slundberg/shap
 
 * **线性函数归一化（Min-Max Scaling）**：
 对数据进行**线性变换**，使之映射到0～1之内，其公式为：
-![image-20190630220222371](./assets/min-max-scaling.png)
+![image-20190630220222371](./asserts/min-max-scaling.png)
 * **零均值归一化（Z-Score Normalization）**：
 对数据进行转换映射到均值为0，标准差为1的分布上。
 
 那么，特征归一化的原因是什么呢？一般可以参考下面的**随机梯度下降**的例子：
 
-![image-20190630220646075](./assets/feature Scaling.png)
+![image-20190630220646075](./asserts/feature Scaling.png)
 
 其中，上图中X1的取值范围为[0, 10]，X2的取值范围为[0, 3]，当不做任何数据归一化处理的时候，在学习率相同的情况下，X1的更新速度会大于X2，需要较多次的迭代才会找到最优解，就如左图所示。相反如果归一化后，则会像右图一样，更加容易找到最优解。
 
@@ -427,7 +427,7 @@ https://github.com/slundberg/shap
 
 * **二进制编码（Binary Encoding）**：二进制编码主要分两步，先用序号编码给每个类别赋予新的类别ID，然后对类别ID进行二进制编码，还是血型A、B、O、AB，分别赋予为1，2，3，4，对应的二进制为001、010、011、100，其相比于独热编码还是可以节省一些空间。
 
-![image-20190630230329945](./assets/encoding.png)
+![image-20190630230329945](./asserts/encoding.png)
 
 
 
@@ -447,11 +447,11 @@ https://github.com/slundberg/shap
 
   **权重TF-IDF**（Term Frequency-Inverse Document Frequency）的计算公式：
 
-![image-20190702223231370](./assets/tf_idf.png)
+![image-20190702223231370](./asserts/tf_idf.png)
 
 * **IDF(t) 为逆文档频率**，用来衡量单词t对表达语义所起的重要性，如果一个词在非常多的文章中都出现过，那么它可能是一个比较通用的词，那么贡献会较小，权重需要做惩罚。
 
-![image-20190702223619219](./assets/idf.png)
+![image-20190702223619219](./asserts/idf.png)
 
 * **N-gram模型**：将连续出现的n个词(n<=N)组成的词组(N-gram)作为一个单独的特征放到向量表示中去构成模型。另外，同一个词可能有多种词性变化，所以一般会对单词进行词干抽取（Word Stemming），统一为同一词干的形式。
 * **主题模型（Topic Model）**：用于从文本库中发现有代表性的主题，并且能够计算出每篇文章的主题分布。
@@ -471,7 +471,7 @@ Word2Vec上Google在2013年提出的词嵌入模型，其实就是一种浅层�
 
 根据当前词语来预测上下文中各个词语的生成概率。
 
-![image-20190702225546017](./assets/word2vec.png)
+![image-20190702225546017](./asserts/word2vec.png)
 
 > **输入层**
 
@@ -487,7 +487,7 @@ Word2Vec上Google在2013年提出的词嵌入模型，其实就是一种浅层�
 
 Softmax公式：（其中X代表N维的原始输出向量，Xn为在原始输出向量中，与单词Wn所对应维度的取值。
 
-![image-20190703222625715](./assets/softmax.png)
+![image-20190703222625715](./asserts/softmax.png)
 
 
 
@@ -510,7 +510,7 @@ Softmax公式：（其中X代表N维的原始输出向量，Xn为在原始输出
   * 颜色变换；
   * 改变图像的亮度、清晰度、对比度、锐度等等。
 
-![image-20190703223857511](./assets/图像变换.png)
+![image-20190703223857511](./asserts/图像变换.png)
 
 
 
@@ -566,21 +566,21 @@ PCA（Principal Components Analysis），即主成分分析，是降维操作中
 
 内积运算将两个向量映射为一个实数，下面是两个维数相同的向量的内积：
 
-![image-20190709203813468](./assets/内积.png) 
+![image-20190709203813468](./asserts/内积.png) 
 
 假设存在两个点A,B，其在坐标轴的位置如下图： 
 
-![image-20190709203842786](./assets/pca1.png)
+![image-20190709203842786](./asserts/pca1.png)
 
-我们从A向B引一条垂线，也就是A在B上的投影，其夹角为a，则投影的矢量长度为|A|cos(a)，其中![image-20190709203914870](./assets/pca2.png)是向量A的模，也就是A线段的标量长度。
+我们从A向B引一条垂线，也就是A在B上的投影，其夹角为a，则投影的矢量长度为|A|cos(a)，其中![image-20190709203914870](./asserts/pca2.png)是向量A的模，也就是A线段的标量长度。
 
 而内积的另一种表现形式为： 
 
-![image-20190709203937621](./assets/pca3.png)
+![image-20190709203937621](./asserts/pca3.png)
 
 也就是说，当B的模为1的时候，也就是单位向量的时候，内积可以表示为： 
 
-![image-20190709204000852](./assets/pca4.png)
+![image-20190709204000852](./asserts/pca4.png)
 
 也就是A与B的内积值等于A向B所在直线投影的矢量长度。
 
@@ -592,15 +592,15 @@ PCA（Principal Components Analysis），即主成分分析，是降维操作中
 
 基变换指的是当前向量和一个基进行内积运算，得到的结果作为新的坐标分量。
 
-假设存在一个点（3,2），一般我们都会取(1,0)和(0,1)为基，也就是我们的X和Y轴方向。如果我们取(1,1)和(-1,1)为我们的基，但我们希望基的模为1，这样子会方便计算，所以可以除以当前的模长，所以上面的基就变成了：![image-20190709204101665](./assets/pca5.png)
+假设存在一个点（3,2），一般我们都会取(1,0)和(0,1)为基，也就是我们的X和Y轴方向。如果我们取(1,1)和(-1,1)为我们的基，但我们希望基的模为1，这样子会方便计算，所以可以除以当前的模长，所以上面的基就变成了：![image-20190709204101665](./asserts/pca5.png)
 
 如下图所示：
 
-![image-20190709204119096](./assets/pca6.png)
+![image-20190709204119096](./asserts/pca6.png)
 
 所以，进行基变换，只需要进行一次内积运算： 
 
-![image-20190709204147245](./assets/pca7.png)
+![image-20190709204147245](./asserts/pca7.png)
 
 
 
@@ -608,11 +608,11 @@ PCA（Principal Components Analysis），即主成分分析，是降维操作中
 
 一个字段的方差可以看做是每个元素与字段均值的差的平方和的均值，即：
 
-![image-20190709204258661](./assets/pca8.png)
+![image-20190709204258661](./asserts/pca8.png)
 
 一般我们都会把均值为化为0，即进行一次变换，所以方差可以表示为：
 
-![image-20190709204327637](./assets/pca9.png) 
+![image-20190709204327637](./asserts/pca9.png) 
 
 
 
@@ -620,7 +620,7 @@ PCA（Principal Components Analysis），即主成分分析，是降维操作中
 
 如果单纯地选择方差最大的方向，则无法保证两个字段之间相互独立，因为我们需要的是尽可能多地保留原始信息，但又是相互独立，这里我们引入一下概念，协方差，用来表示两个字段的相关性，公式为：
 
-![image-20190709204446882](./assets/pca10.png)
+![image-20190709204446882](./asserts/pca10.png)
 
 > 协方差：度量各个维度偏离其均值的程度。协方差的值如果为正值，则说明两者是正相关的(从协方差可以引出“相关系数”的定义)，结果为负值就说明负相关的，如果为0，也是就是统计上说的“相互独立”。 
 
@@ -634,9 +634,9 @@ PCA（Principal Components Analysis），即主成分分析，是降维操作中
 
 在统计学与概率论中，协方差矩阵的每个元素是各个向量元素之间的协方差，是从标量随机变量到高维度随机向量的自然推广。
 
-假设存在矩阵X：![image-20190709204712547](./assets/pca11.png)
+假设存在矩阵X：![image-20190709204712547](./asserts/pca11.png)
 
-其协方差矩阵为：![image-20190709204728939](./assets/pca12.png)
+其协方差矩阵为：![image-20190709204728939](./asserts/pca12.png)
 
 可以看出，协方差矩阵的对角线元素为两个字段的方差，而其他元素为矩阵的协方差，按照我们之前的说法，我们需要得到协方差为0，并且方差最大的转换。 
 
@@ -648,7 +648,7 @@ PCA（Principal Components Analysis），即主成分分析，是降维操作中
 
 设原始数据矩阵X对应的协方差矩阵为C，而P是一组基按行组成的矩阵，设Y=PX，则Y为X对P做基变换后的数据。设Y的协方差矩阵为D，我们推导一下D与C的关系： 
 
-![image-20190709204830269](./assets/pca13.png)
+![image-20190709204830269](./asserts/pca13.png)
 
 我们要找的P不是别的，而是能让原始协方差矩阵对角化的P。换句话说，优化目标变成了寻找一个矩阵P，满足PCP^T是一个对角矩阵，并且对角元素按从大到小依次排列，那么P的前K行就是要寻找的基，用P的前K行组成的矩阵乘以X就使得X从N维降到了K维并满足上述优化条件。 
 
@@ -674,39 +674,39 @@ PCA（Principal Components Analysis），即主成分分析，是降维操作中
 
 **8. PCA实例**
 
-假设存在2维数据：![image-20190709205010824](./assets/pca14.png),需要将其降至1维。
+假设存在2维数据：![image-20190709205010824](./asserts/pca14.png),需要将其降至1维。
 
 1）均值归0：目前每个维度的均值均为0，无需变换。
 
 2）求协方差矩阵
 
-![image-20190709205101005](./assets/pca15.png)
+![image-20190709205101005](./asserts/pca15.png)
 
 3）求解特征值以及特征向量
 
-![image-20190709205123561](./assets/pca16.png)
+![image-20190709205123561](./asserts/pca16.png)
 
-![image-20190709205139509](./assets/pca17.png)
+![image-20190709205139509](./asserts/pca17.png)
 
 可以参考：<https://jingyan.baidu.com/article/27fa7326afb4c146f8271ff3.html>  
 
 4）标准化特征向量
 
-![image-20190709205201065](./assets/pca19.png)
+![image-20190709205201065](./asserts/pca19.png)
 
 5）得到对角矩阵P并验证对角化  
 
-![image-20190709205217098](./assets/pca20.png)
+![image-20190709205217098](./asserts/pca20.png)
 
-![image-20190709205230374](./assets/pca21.png)
+![image-20190709205230374](./asserts/pca21.png)
 
 6）因为需要得到1维矩阵，因此用P的第一行乘以原矩阵即可： 
 
-![image-20190709205244744](./assets/pca22.png)
+![image-20190709205244744](./asserts/pca22.png)
 
 降维投影如下图所示：
 
-![image-20190709205316186](./assets/pca23.png)  
+![image-20190709205316186](./asserts/pca23.png)  
 
 
 
@@ -744,11 +744,11 @@ inverse_transform()： 将降维后的数据转换成原始数据，X=pca.inver
 
 线性判别分析（Linear Discriminant Analysis，LDA）是一种有监督学习算法，也是经常被拿来降维，它和PCA的区别在于是否存在标签，其中心思想就是—— 最大化类间距离和最小化类内距离。 
 
-![image-20190709205532213](./assets/lda1.png)
+![image-20190709205532213](./asserts/lda1.png)
 
 而PCA的不足在于不能很好地分开不同类别的数据，如下图： 
 
-![image-20190709205550136](./assets/lda2.png)
+![image-20190709205550136](./asserts/lda2.png)
 
 LDA算法既可以用来降维，又可以用来分类，但是目前来说，主要还是用于降维。在我们进行图像识别图像识别相关的数据分析时，LDA是一个有力的工具。下面总结下LDA算法的优缺点：
 
@@ -841,7 +841,7 @@ $$
 - 从均匀分布U(0，1)产生一个随机数  $$u_i$$ 
 - 计算逆函数 $$x_i = \phi ^{-1}(u_i) $$ 来间接得到x
 
-![image-20190721230136581](./assets/sample2.png)
+![image-20190721230136581](./asserts/sample2.png)
 
 但并不是所有的目标分布的累积分布函数的逆函数都是可以求解的（or容易计算），这个时候逆变换采样法就不太适用，可以考虑拒绝采样（Rejection Sampling）和重要度采样（Importance Sampling）。
 
@@ -853,13 +853,13 @@ $$
 3）如果 $$u_i < \frac {p(x_i)}{M \cdot q(x_i)} $$ , 则接受样本$$x_i$$，否则拒绝，一直重复1-3步骤，直到新产生的样本量满足要求。
 其实，拒绝采样的关键就是为我们的目标分布p(x)选取一个合适的包络函数 $$M \cdot q(x)$$，如下图所示的正态分布的函数：
 
-![image-20190721230136581](./assets/sample3.png)
+![image-20190721230136581](./asserts/sample3.png)
 
 可以知道，包络函数越“紧”，$$p(x_i)$$与$$M \cdot q(x_i)$$的大小越接近，那么$$  \frac {p(x_i)}{M \cdot q(x_i)} $$就越接近1，那么更容易接受采样样本A，这样子采样的效率就越高。
 
 除了上面的形式，还有一种叫自适应拒绝采样（Adaptive Rejection Sampling），在目标分布是对数凹函数时，用分段的线性函数来做包络函数，如下图所示：
 
-![image-20190721230136581](./assets/sample4.png)
+![image-20190721230136581](./asserts/sample4.png)
 
 #### 03 重要性采样（Importance Sampling）
 
@@ -877,7 +877,7 @@ E[f] \approx \hat{E}_N[f] = \sum_{i=1}^n f(x_i) w(x_i)
 $$
 下图就是重要性采样的示意图：
 
-![image-20190721230136581](./assets/sample5.png)
+![image-20190721230136581](./asserts/sample5.png)
 
 
 
@@ -893,7 +893,7 @@ $$
 
 MCMC有着不同的马尔科夫链（Markov Chain），不同的链对应不用的采样法，常见的两种就是**Metropolis-Hastings采样法和吉布斯采样法**。
 
-![image-20190721230136581](./assets/sample6.png)
+![image-20190721230136581](./asserts/sample6.png)
 
 **2. Metropolis-Hastings采样法**
 
@@ -961,7 +961,7 @@ $$
 $$
 其中，$\mathbf{\hat{x}}$ 为选出的k近邻点，$\delta\in[0,1]$是一个随机数。下图就是一个SMOTE生成样本的例子，使用的是3-近邻，可以看出SMOTE生成的样本一般就在 $\mathbf{x}_{i}$和$ \mathbf{\hat{x}}_{i}$相连的直线上：
 
-![image-20190721230136581](./assets/\sample71.png)
+![image-20190721230136581](./asserts/\sample71.png)
 
 从图中可以看出 $${x}_{new}$$ 就是我们新生成样本点，但是，SMOTE算法也是有缺点的：
 
@@ -975,7 +975,7 @@ $$
 
 这个算法一开始会先将少数类样本分成3类，分别DANGER、SAFE、NOISE，如下图：
 
-![image-20190721230136581](./assets/\sample8.png)
+![image-20190721230136581](./asserts/\sample8.png)
 
 而Border-line SMOTE算法只会在“DANGER”状态的少数类样本中去随机选择，然后利用SMOTE算法产生新样本。
 
@@ -1008,7 +1008,7 @@ NearMiss本质上是一种原型选择(prototype selection)方法，即从多数
 
 NearMiss-1和NearMiss-2的计算开销很大，因为需要计算每个多类别样本的K近邻点。另外，NearMiss-1易受离群点的影响，如下面第二幅图中合理的情况是处于边界附近的多数类样本会被选中，然而由于右下方一些少数类离群点的存在，其附近的多数类样本就被选择了。相比之下NearMiss-2和NearMiss-3不易产生这方面的问题。
 
-![image-20190721230136581](./assets/\sample9.png)
+![image-20190721230136581](./asserts/\sample9.png)
 
 
 
@@ -1056,7 +1056,7 @@ https://nbviewer.jupyter.org/github/massquantity/Class-Imbalance/blob/master/Cod
 
 K-Mean的基本思想就是通过迭代的方式寻找K个簇（Cluster）的一种划分方案，使得聚类结果对应的Cost Function最小，一般K-Mean的Cost Function为各个样本距离所属簇中心点的误差平方和，公式为：
 
-![image-20190711215415003](./assets/kmean1.png)
+![image-20190711215415003](./asserts/kmean1.png)
 
 其中Xi代表第i个样本，Ci是Xi所属的簇，μci代表簇对应的中心点，M是样本总数。
 
@@ -1068,12 +1068,12 @@ K-Mean的基本思想就是通过迭代的方式寻找K个簇（Cluster）的一
 
 2）随机抽取K个簇(K由人工设定)；
 
-3）定义Cost Function：![image-20190711220005200](./assets/kmean2.png)；
+3）定义Cost Function：![image-20190711220005200](./asserts/kmean2.png)；
 
 4）不断迭代下面👇步骤，直到CF收敛：
 
- * 对于每个样本Xi，将其分配到距离最近的簇：![image-20190711220301773](./assets/kmean3.png)
- * 对于每个簇，重新计算簇中心：![image-20190711220317648](./assets/kmean4.png)
+ * 对于每个样本Xi，将其分配到距离最近的簇：![image-20190711220301773](./asserts/kmean3.png)
+ * 对于每个簇，重新计算簇中心：![image-20190711220317648](./asserts/kmean4.png)
 
 
 
@@ -1105,7 +1105,7 @@ K-Mean的基本思想就是通过迭代的方式寻找K个簇（Cluster）的一
 
 K值并不是拍脑袋拍出来的，需要用科学的办法去确定。一般可以通过多次试验结果决定，如采用手肘法：
 
-![image-20190711221350221](./assets/kmean5.png)
+![image-20190711221350221](./asserts/kmean5.png)
 
 其中，横轴为K的取值，纵轴为误差平方和所定义的Loss Function。
 
@@ -1154,11 +1154,11 @@ ISODATA的应用也是比较复杂的，需要填比较多的参数：
 
 高斯模型，对应着高斯分布，高斯分布也就是我们平时常说的正态分布，高斯混合模型(Gaussian Mixed Model，GMM)也是一种聚类算法，和K-Mean算法类似，都是用了EM算法进行迭代计算。高斯混合模型是假设每个簇的数据都符合正态分布，当前数据呈现的分布则是每个正态分布的混合结果。
 
-![image-20190713090749891](./assets/gmm1.png)
+![image-20190713090749891](./asserts/gmm1.png)
 
 高斯混合模型的核心思想，每个单独的分模型都是**标准高斯分布**模型，其均值和方差都是待估计的参数，还有一个参数π，可以理解为权重(or 生成数据的概率)，其公式为：
 
-![image-20190715212422412](./assets/gmm2.png)
+![image-20190715212422412](./asserts/gmm2.png)
 
 它是一个生成式模型，并且通过EM算法框架来求解，具体的迭代过程如下：
 
@@ -1215,7 +1215,7 @@ SOM本质上是一个两层神经网络，包含输入层和输出层。输入�
 
 一般，SOM模型的常见网络结构有两种，分别是一维和二维的：
 
-![image-20190715215559996](./assets/gmm3.png)
+![image-20190715215559996](./asserts/gmm3.png)
 
 
 
@@ -1225,7 +1225,7 @@ SOM的自组织学习过程，可以归纳为下面几个子过程：
 
 2）竞争：神经元计算每一个输入模式各自的判别函数值，并宣布具有最小判别函数值的特定神经元为胜利者，每个神经元j的判别函数为：
 
-![image-20190715215836296](./assets/gmm4.png)
+![image-20190715215836296](./asserts/gmm4.png)
 
 3）合作：获胜的神经元决定了兴奋神经元拓扑邻域的空间位置，确定了激活节点后，更新临近的节点。
 
@@ -1330,7 +1330,7 @@ silhouette 是一个衡量一个结点与它属聚类相较于其它聚类的相
 
 下面一张图介绍几种Scikit learn的常用聚类算法的比较：
 
-![image-20190715224235990](./assets/cluster.png)
+![image-20190715224235990](./asserts/cluster.png)
 
 
 
@@ -1340,27 +1340,27 @@ silhouette 是一个衡量一个结点与它属聚类相较于其它聚类的相
 
 **1）K-Means聚类**
 
-![image-20190715224548237](./assets/cluster1.png)
+![image-20190715224548237](./asserts/cluster1.png)
 
 **2）分层聚类（Hierarchical clustering）**
 
-![image-20190715224618646](./assets/cluster2.png)
+![image-20190715224618646](./asserts/cluster2.png)
 
 **3）t-SNE聚类**
 
-![image-20190715224641431](./assets/cluster3.png)
+![image-20190715224641431](./asserts/cluster3.png)
 
 **4）DBSCAN聚类**
 
-![image-20190715224656675](./assets/cluster4.png)
+![image-20190715224656675](./asserts/cluster4.png)
 
 **5）MiniBatchKMeans**
 
-![image-20190715224754369](./assets/cluster5.png)
+![image-20190715224754369](./asserts/cluster5.png)
 
 **6）Affinity Propagation（近邻传播）**
 
-![image-20190715224812421](./assets/cluster6.png)
+![image-20190715224812421](./asserts/cluster6.png)
 
 
 
@@ -1720,7 +1720,7 @@ MLK，即Machine Learning Knowledge，本专栏在于对机器学习的重点知
 
 首先，我们得知道准确率的定义，它指的是分类正确的样本占总样本个数的比例，公式为：
 
-![image-20190704231350616](./assets/accuracy.png)
+![image-20190704231350616](./asserts/accuracy.png)
 
 所以，从公式上可以看出明显缺陷，那就是当我们的样本极度不平衡的时候，比如99%都是正样本，那么分类器只要把样本都预测为正样本，那么准确率就有99%了，但这样子的分类器其实意义不大。
 
@@ -1736,31 +1736,31 @@ Recall：指的是分类正确的正样本个数占真正的正样本个数的�
 
 所以当我们在评估一个排序模型的时候，需要绘制一个P-R曲线（即Precision-Recall曲线），曲线的横坐标为召回率，纵坐标为精确率，我们评估模型的时候就要整体的PR曲线表现。
 
-![image-20190706140556088](./assets/PR.png)
+![image-20190706140556088](./asserts/PR.png)
 
 > **RMSE（平方根误差）**
 
 RMSE，Root Mean Squared Error，一般都是用来衡量回归模型的好坏，但是这个指标往往对离群点特别地敏感，即便大多数的预测都很准，但如果存在小部分的离群点，都会把这个指标变得很大，公式为：
 
-![image-20190706141020547](./assets/RMSE.png)
+![image-20190706141020547](./asserts/RMSE.png)
 
 > **MSE（均方误差）**
 
 MSE （Mean Squared Error）叫做均方误差，这个往往都是用于线性回归的损失函数，就是让这个指标最小化，公式为：
 
-![image-20190706141744608](./assets/MSE.png)
+![image-20190706141744608](./asserts/MSE.png)
 
 > **MAE（平均绝对误差）**
 
 MAE（Mean Absolute Error），其实和MSE差不多。
 
-![image-20190706142046152](./assets/MAE.png)
+![image-20190706142046152](./asserts/MAE.png)
 
 > **MAPE（平均绝对百分比误差）**
 
 MAPE，Mean Absolute Percent Error，它相比于RMSE有更强的鲁棒性，它会把每个点的误差进行归一化，降低了个别离群点带来的绝对误差的影响，公式为：
 
-![image-20190706142613198](./assets/MAPE.png)
+![image-20190706142613198](./asserts/MAPE.png)
 
 
 
@@ -1768,19 +1768,19 @@ MAPE，Mean Absolute Percent Error，它相比于RMSE有更强的鲁棒性，它
 
 ROC曲线（Receiver Operating Characteristic Curve）在模型评估上是值得专门用一小节来整理一下的，对于风险评分卡等二值分类器特别常用也是最重要的一个指标。
 
-![image-20190706143811906](./assets/ROC.png)
+![image-20190706143811906](./asserts/ROC.png)
 
 横轴：负正类率(false postive rate FPR)，又被叫作特异度，划分实例中所有负例占所有负例的比例。
 
-![image-20190706144154088](./assets/FPR.png)
+![image-20190706144154088](./asserts/FPR.png)
 
 纵轴：真正类率(true postive rate TPR)，又被叫作灵敏度。
 
-![image-20190706144114511](./assets/TPR.png)
+![image-20190706144114511](./asserts/TPR.png)
 
 混淆矩阵：
 
-![image-20190706144045488](./assets/混淆矩阵.png)
+![image-20190706144045488](./asserts/混淆矩阵.png)
 
 AUC指的是ROC曲线下的面积大小，可以量化地反映出基于ROC曲线衡量出的模型性能，一般取值就是0.5～1，越高越好。
 
@@ -1790,7 +1790,7 @@ AUC指的是ROC曲线下的面积大小，可以量化地反映出基于ROC曲�
 
 余弦定理我们在高中的时候就学过了，一般都是用来计算角度的，而在机器学习问题中，也是一样来计算夹角，因为通常我们的特征都会表示为向量形式，那分析两个特征相似度的时候，都会用余弦相似度来表示：
 
-![image-20190706145545398](./assets/余弦相似度.png)
+![image-20190706145545398](./asserts/余弦相似度.png)
 
 余弦相似度，其取值范围为[-1, 1]，当两个相同方向的向量比较，其取值为1，相反方向的取值为-1。
 
@@ -1865,23 +1865,23 @@ AUC指的是ROC曲线下的面积大小，可以量化地反映出基于ROC曲�
 
 说起**多层感知器（Multi-Later Perceptron）**，不得不先介绍下**单层感知器（Single Layer Perceptron）**，它是最简单的神经网络，包含了输入层和输出层，没有所谓的中间层（隐含层），可看下图：
 
-![1563936868770](./assets/dfn1.png)
+![1563936868770](./asserts/dfn1.png)
 
 也就是说，将输入向量赋予不同的权重向量，整合后加起来，并通过激活函数输出1或-1，一般单层感知机只能解决线性可分的问题，如下图：
 
-![1563937537894](./assets/dfn2.png)
+![1563937537894](./asserts/dfn2.png)
 
 
 
 我选择了0个隐含层，也就是我们介绍的单层感知机，对于可以线性可分的数据，效果还是可以的。如果我换成线性不可分的数据集，如下图，那么跑半天都跑不出个什么结果来。
 
-![1563937641630](./assets/dfn3.png)
+![1563937641630](./asserts/dfn3.png)
 
 
 
 这个时候就引入多层感知器，它相比单层感知器多了一个隐含层的东西，同样的数据集，我加入两层 隐含层，瞬间就可以被分类得很好。
 
-![1563937834913](./assets/dfn4.png)
+![1563937834913](./asserts/dfn4.png)
 
 
 
@@ -1905,7 +1905,7 @@ f(z) = \frac{1}{1+e^{-z}}
 $$
 对应函数图像为：
 
-![dfn6](./assets/dfn6.png)
+![dfn6](./asserts/dfn6.png)
 
 对应的导函数为：
 $$
@@ -1923,7 +1923,7 @@ f(z)=tanh(z)=\frac{\sin hz}{\cos hz}=\frac{e^z-e^{-z}}{e^z+e^{-z}}
 $$
 对应函数图像为：
 
-![1563955971959](./assets/dfn7.png)
+![1563955971959](./asserts/dfn7.png)
 
 对应的导函数为：
 $$
@@ -1945,7 +1945,7 @@ f(z)=max(0,z)
 $$
 对应函数图像为（a）：
 
-![1563956585547](./assets/dfn8.png)
+![1563956585547](./asserts/dfn8.png)
 
 对应的导函数为：
 $$
@@ -2042,7 +2042,7 @@ Dropout在深度学习网络训练中是十分常用的，指的是以一定的�
 
 具体实现上，在训练过程中，神经元的节点激活值以一定的概率p被“丢弃”，也就是“停工”。因此，对于包含N个神经元节点的网络，在Dropout的作用下可以看做是生成 2的N次方个模型的集合，这个过程会减弱全体神经元之间的联合适应性，减少过拟合的风险，增强泛化能力。
 
-![1564022901304](./assets/dfn9.png)
+![1564022901304](./asserts/dfn9.png)
 
 
 
@@ -2074,7 +2074,7 @@ L2正则化也许是最常用的正则化的形式。它可以通过将模型中
 
 3）直接采用相关的Boosting和Bagging算法。
 
-![img](./assets/dfn10.png)
+![img](./asserts/dfn10.png)
 
 
 
@@ -2084,13 +2084,13 @@ L2正则化也许是最常用的正则化的形式。它可以通过将模型中
 
 一个深度卷积神经网络模型，一般由若干卷积层叠加若干全连接层组成，中间包含各种的非线性操作、池化操作。卷积运算主要用于处理网格结构的数据，因此CNN天生对图像数据的分析与处理有着优势，简单地来理解，那就是CNN是利用滤波器（Filter）将相邻像素之间的轮廓过滤出来。
 
-![1564035601144](./assets/dfn11.png)
+![1564035601144](./asserts/dfn11.png)
 
 #### Convolution（卷积）
 
 卷积的滤波器（Filter）我们可以看做是一个window，可以观察下面的案例，有一个6X6的网络以及一个3X3的Filter，其中Filter的每个格子上有权值。拿着FIlter在网络上去移动，直到所有的小格子都被覆盖到，每次移动，都将Filter“观察”到的内容，与之权值相乘作为结果输出。最后，我们可以得到一个4X4的网格矩阵。（下面的6张图来自参考文献5，侵删）
 
-![image-20190725204954443](./assets/dfn12.png)
+![image-20190725204954443](./asserts/dfn12.png)
 
 
 
@@ -2098,7 +2098,7 @@ L2正则化也许是最常用的正则化的形式。它可以通过将模型中
 
 卷积后的矩阵大小与一开始的不一致，那么我们需要对边缘进行填充，以保证尺寸一致。
 
-![image-20190725205046885](./assets/dfn13.png)
+![image-20190725205046885](./asserts/dfn13.png)
 
 
 
@@ -2106,7 +2106,7 @@ L2正则化也许是最常用的正则化的形式。它可以通过将模型中
 
 也就是Filter移动的步伐大小，上面的例子为1，其实可以由我们自己来指定，有点像是学习率。
 
-![image-20190725205116637](./assets/dfn14.png)
+![image-20190725205116637](./asserts/dfn14.png)
 
 
 
@@ -2114,7 +2114,7 @@ L2正则化也许是最常用的正则化的形式。它可以通过将模型中
 
 深度指的是图片的深度，一张6X6X3大小的图片经过3X3X3的Filter过滤后会得到一个4X4X1大小的图片，因此深度为1。我们也可以通过增加Filter的个数来增加深度，如下：
 
-![image-20190725205231410](./assets/dfn15.png)
+![image-20190725205231410](./asserts/dfn15.png)
 
 
 
@@ -2122,13 +2122,13 @@ L2正则化也许是最常用的正则化的形式。它可以通过将模型中
 
 因为滤波器在进行窗口移动的过程中会有很多冗余计算，效率很慢，池化操作的目的在于加速卷积操作，最常用的有Maxpooling，其原理如下图所示：
 
-![image-20190725205259725](./assets/dfn16.png)
+![image-20190725205259725](./asserts/dfn16.png)
 
 
 
 #### 完整的深度CNN网络
 
-![image-20190725205326997](./assets/dfn17.png)
+![image-20190725205326997](./asserts/dfn17.png)
 
 
 
@@ -2248,13 +2248,13 @@ $$
 
 
 
-![dfn6](./assets/dfn6.png)
+![dfn6](./asserts/dfn6.png)
 
 
 $$
 f^{'}(z) = f(z)(1-f(z))
 $$
-![image-20191027112708590](./assets/102801.png)
+![image-20191027112708590](./asserts/102801.png)
 
 可以看出，Sigmoid激活函数在定义域上是单调递增的，越靠近两端变化越平缓，从导数图像可以看出，Sigmoid函数的导数取值范围在0-0.25之间，如果我们初始化的网络权值∣w∣小于1（一般也是这么操作），随着层数不断增多，每次连乘后逐渐变小，梯度就逐渐消失了。
 
@@ -2302,7 +2302,7 @@ Step2：fine-tunning（微调）
 
 **权重正则化**也是为了解决梯度爆炸问题而提出的，常见的就是L1、L2正则化，在各个深度框架中都有对应的API可以使用正则化，正则化是通过对网络权重做正则限制过拟合，如下面的Loss Function：
 
-![image-20191027175450421](./assets/102802.png)
+![image-20191027175450421](./asserts/102802.png)
 
 
 
@@ -2312,7 +2312,7 @@ Step2：fine-tunning（微调）
 
 LSTM全称是长短期记忆网络（long-short term memory networks），是不那么容易发生梯度消失的，主要原因在于LSTM内部复杂的“门”(gates)，如下图，LSTM通过它内部的“门”可以接下来更新的时候“记住”前几次训练的”残留记忆“，因此，经常用于生成文本中。目前也有基于CNN的LSTM，感兴趣的可以尝试一下。
 
-![image-20191027175705565](./assets/102803.png)
+![image-20191027175705565](./asserts/102803.png)
 
 
 
@@ -2370,7 +2370,7 @@ Seq2Seq的核心在于解码部分，大量的改进也是在解码环节衍生�
 
 
 
-![image-20191028231013039](./assets/102804.png)
+![image-20191028231013039](./asserts/102804.png)
 
 
 
@@ -2382,7 +2382,7 @@ Attention Mechanism的提出源自于一个问题。在实际的使用中，随�
 
 更加直观的理解，就是我们在生成一个输出词时，会考虑每一个输入词和当前输出词的对齐关系，对齐越好的词，会有更大的权重，对生成当前输出词的影响就越大。
 
-![image-20191028232008056](./assets/102805.png)
+![image-20191028232008056](./asserts/102805.png)
 
 
 
@@ -2478,7 +2478,7 @@ Bagging采取分而治之的策略，通过对训练样本多次采样，并分�
 
 (2) 训练基分类器：假设有T个基分类器，则可以按照如下过程来训练基分类器：
 
-![image-20191120212234005](./assets/jicheng01.png)
+![image-20191120212234005](./asserts/jicheng01.png)
 
 (3) 合并基分类器：给定一个未知样本z，输出分诶结果为加权投票的结果。
 
@@ -2649,7 +2649,7 @@ print('TEST Accuracy:',test_result[1])
 
 可以看出结果还是很烂的，Train 和 Test都只是有13%左右的准确度。
 
-![1565078787277](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080701.png)
+![1565078787277](./asserts/080701.png)
 
 
 
@@ -2685,7 +2685,7 @@ print('TEST Accuracy:',test_result[1])
 
 可以看出，换了合适的Loss Function，模型效果有了很大的提升，看来机器学习还是需要懂些理论知识的，不然盲目调参并不是明智的选择。
 
-![1565078936839](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080702.png)
+![1565078936839](./asserts/080702.png)
 
 
 
@@ -2694,7 +2694,7 @@ print('TEST Accuracy:',test_result[1])
 
 
 
-![img](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080703.png)
+![img](./asserts/080703.png)
 
 
 
@@ -2737,7 +2737,7 @@ print('TEST Accuracy:',test_result[1])
 
 #### output：
 
-![1565081568000](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080704.png)
+![1565081568000](./asserts/080704.png)
 
 设置太大的batch_size，训练效率是超级快了，但是效果却很差。而按照batch_size的原理，如果减小batch_size的值，效率会变慢很多，但效果还蛮不错。
 
@@ -2746,7 +2746,7 @@ print('TEST Accuracy:',test_result[1])
 model.fit(x_train,y_train, batch_size=10, epochs=20)
 ```
 
-![1565081519801](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080705.png)
+![1565081519801](./asserts/080705.png)
 
 
 
@@ -2786,7 +2786,7 @@ print('TEST Accuracy:',test_result[1])
 
 效果是出奇的差，从原先的85%左右掉到11%左右，于是我试着变少一些，比如3层、5层什么的，效果也都还是不行，看来并不是盲目地增加隐含层数量来提升效果的哦。
 
-![1565082799652](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080706.png)
+![1565082799652](./asserts/080706.png)
 
 
 
@@ -2825,7 +2825,7 @@ print('TEST Accuracy:',test_result[1])
 
 效果杠杠的，可以达到95%+了。
 
-![1565083720914](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080707.png)
+![1565083720914](./asserts/080707.png)
 
 
 
@@ -2843,7 +2843,7 @@ model.compile(loss='categorical_crossentropy',
 
 效果还是蛮不错的。
 
-![1565084601126](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080708.png)
+![1565084601126](./asserts/080708.png)
 
 
 
@@ -2884,7 +2884,7 @@ print('TEST Accuracy:',test_result[1])
 
 我拿的是上面小节的代码，加了0.7的Dropout，效果有所下降，但确实Train和Test的差距会变小很多。
 
-![1565084994448](/Users/yongsenlin/Documents/学习课程/✏️相关笔记/百面机器学习/_assets\080709.png)
+![1565084994448](./asserts/080709.png)
 
 
 
