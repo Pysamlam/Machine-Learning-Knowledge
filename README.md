@@ -1,7 +1,8 @@
 # 😆 Machine-Learning-Knowledge
 ### Important machine learning knowledge, each article deeply analyzes theoretical knowledge
 
-近10万字的机器学习理论知识点文章汇集，满足你对machine learning理论知识的学习~
+近8万字的机器学习理论知识点文章汇集，满足你对machine learning理论知识的学习~ 文章主要来自于作者对于《百面机器学习》以及其他网路上的一些学习笔记总结📒 ，分享给更多的同行同学一起学习复习~
+
 
 <br/> 
 <br/> 
@@ -31,9 +32,9 @@
 
 [MLK12 | Keras 基础模型调参指南](#MLK12--Keras基础模型调参指南)
 
-[返回主菜单](#index持续更新)
 
 
+> PDF版本可在微信公众号：SAMshare 进行下载，后台回复“MLK”关键字即可
 
 <br/> 
 
@@ -2906,3 +2907,9 @@ https://www.jianshu.com/p/3745827decdf
 
 <https://xgboost.readthedocs.io/en/latest/>
 
+<br/> 
+
+
+![1565084994448](./asserts/底图2.0.png)
+
+更多最新的文章请关注微信公众号哈~
