@@ -114,7 +114,7 @@ Download：https://arxiv.org/pdf/1607.01759v3.pdf
 
 
 
-#### 以上的论文我已经下载好了的，大家感兴趣的可以[下载来看看哦~](https://github.com/Pysamlam/Machine-Learning-Knowledge/blob/master/MLK01%20%7C%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E6%90%9C%E7%B4%A2%E5%88%A9%E5%99%A8%E6%8E%A8%E8%8D%90/assets/Paper_ML.rar)
+#### 以上的论文我已经下载好了的，大家感兴趣的可以[下载来看看哦~](https://github.com/Pysamlam/Machine-Learning-Knowledge/blob/master/asserts/Paper_ML.rar)
 
 
 
