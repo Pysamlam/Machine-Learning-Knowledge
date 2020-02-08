@@ -961,7 +961,7 @@ $$
 $$
 其中，$\mathbf{\hat{x}}$ 为选出的k近邻点，$\delta\in[0,1]$是一个随机数。下图就是一个SMOTE生成样本的例子，使用的是3-近邻，可以看出SMOTE生成的样本一般就在 $\mathbf{x}_{i}$和$ \mathbf{\hat{x}}_{i}$相连的直线上：
 
-![image-20190721230136581](./asserts/\sample71.png)
+![image-20190721230136581](./asserts/sample71.png)
 
 从图中可以看出 $${x}_{new}$$ 就是我们新生成样本点，但是，SMOTE算法也是有缺点的：
 
@@ -975,7 +975,7 @@ $$
 
 这个算法一开始会先将少数类样本分成3类，分别DANGER、SAFE、NOISE，如下图：
 
-![image-20190721230136581](./asserts/\sample8.png)
+![image-20190721230136581](./asserts/sample8.png)
 
 而Border-line SMOTE算法只会在“DANGER”状态的少数类样本中去随机选择，然后利用SMOTE算法产生新样本。
 
@@ -1008,7 +1008,7 @@ NearMiss本质上是一种原型选择(prototype selection)方法，即从多数
 
 NearMiss-1和NearMiss-2的计算开销很大，因为需要计算每个多类别样本的K近邻点。另外，NearMiss-1易受离群点的影响，如下面第二幅图中合理的情况是处于边界附近的多数类样本会被选中，然而由于右下方一些少数类离群点的存在，其附近的多数类样本就被选择了。相比之下NearMiss-2和NearMiss-3不易产生这方面的问题。
 
-![image-20190721230136581](./asserts/\sample9.png)
+![image-20190721230136581](./asserts/sample9.png)
 
 
 
@@ -2212,7 +2212,7 @@ https://www.jianshu.com/p/49b70f6480d1
 
 
 
-###🔍 RNN与CNN的区别与联系
+### 🔍 RNN与CNN的区别与联系
 
 在我们处理文本数据的时候，通过会做的操作就是把语料所对应的的TF-IDF向量作为输入，其中TF-IDF向量的维度是词汇表的大小。
 
