@@ -2,6 +2,7 @@
 ### Important machine learning knowledge, each article deeply analyzes theoretical knowledge
 
 近8万字的机器学习理论知识点文章汇集，满足你对machine learning理论知识的学习~ 文章主要来自于作者对于《百面机器学习》以及其他网路上的一些学习笔记总结📒 ，分享给更多的同行同学一起学习复习~
+作者已经将文字内容转换成PDF了，大家可以去下载哈。
 
 
 <br/> 
@@ -33,8 +34,6 @@
 [MLK12 | Keras 基础模型调参指南](#MLK12--Keras基础模型调参指南)
 
 
-
-> PDF版本可在微信公众号：SAMshare 进行下载，后台回复“MLK”关键字即可
 
 <br/> 
 
@@ -2587,7 +2586,7 @@ print('验证KS值: %s' %get_ks(test_y_predprob,y_test))
 <br/> 
 
 
-## MLK12 | Keras 基础模型调参指南
+## MLK12 | Keras基础模型调参指南
 
 
 ### 00- 初始化一个NN模型
